@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  argument list having vars and callbacks that uses the vars.
+
+  <br><br><br>
+  <script>
+    const x=(a,b,c)=>{
+
+      if(!a){c("a error");}else{c("hi");}
+    };
+    x(true,4,(g)=>document.body.innerHTML+=g);
+
+    
+  </script>
+</body>
+</html>

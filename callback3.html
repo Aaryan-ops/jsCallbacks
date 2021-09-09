@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Assignment to a global variable within a function after a timeout, and then accessing that variable in another function. Calling both the functions simultaneously vs calling the last after the value assignment timeout.
+<br /><br><br> <hr>
+  <script>
+    let m;
+const x=()=>setTimeout(()=>m="hello world",3000);
+const y=()=>document.body.innerHTML+=m + "!!!" + "<br /> <br />";
+x();
+y();
+setTimeout(()=>document.body.innerHTML+=m+"!!!",4000);
+  </script>
+</body>
+</html>

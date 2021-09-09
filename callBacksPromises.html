@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const x=()=>document.body.innerHTML+="hello world <hr />";
+    function y(){document.body.innerHTML+=`${this} <br /> ${x.toString()} <br /> ${y.toString()} <br /><hr />`};
+    x();
+    y();
+document.body.innerHTML+=`<br /> <br/>`;
+    const y2=()=>{document.body.innerHTML+=`<br /> this is y2 <br />`;const  b=()=>x;return b;}
+    const g=y2();
+    g()();
+    document.body.innerHTML+=`<br /> <br /><br />`;
+    const y3=()=>{document.body.innerHTML+="THIS IS Y3<br />";return y3; }
+    const b=y3();
+    const m=b();
+    const m2=m();
+    m2();
+
+    const h3=()=>{document.body.innerHTML+=`<br /><br /><hr /> this is h3`;return h3;}
+    const y5=h3(); y5();
+    document.body.innerHTML+=`<br /><br /> description ::<br /><br /> ${h3}  `; 
+
+
+  </script>
+</body>
+</html>
